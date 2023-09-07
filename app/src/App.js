@@ -3,6 +3,8 @@ import './App.css';
 import React from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import Navbar from './components/Navbar';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,6 +25,7 @@ const analytics = getAnalytics(app);
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
