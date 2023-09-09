@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFC100;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .menu ul {
+      flex-direction: column;
+    }
+  
+    .menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to align menu items evenly */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    margin-right: 20px;
+  }
+  
+  .menu-list li:last-child {
+    margin-right: 0;
+  }
+  

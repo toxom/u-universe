@@ -1,5 +1,21 @@
+* {
+  box-sizing: border-box;  /* Ensures padding and border are included in width */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;  /* Hides horizontal scroll */
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .App-logo {
@@ -27,6 +43,56 @@
 .App-link {
   color: #61dafb;
 }
+
+.main-content {
+  flex: 1;
+}
+
+/* Default button styles */
+.Button {
+  color: red;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Variant for a primary button */
+.Button.primary {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+
+/* Variant for a secondary button */
+.Button.secondary {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+}
+
+/* Variant for a disabled button */
+.Button.disabled {
+  background-color: gray;
+  border: 1px solid gray;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+}
+
+
 
 @keyframes App-logo-spin {
   from {

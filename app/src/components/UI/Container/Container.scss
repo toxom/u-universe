@@ -1,0 +1,12 @@
+.Container {
+    position: relative;
+    background: var(--color-bg-primary);
+    margin: 0 auto;
+    max-width: 600px;
+    min-height: 100vh;
+    padding: var(--margin-container-top) var(--margin-container) var(--margin-container-bottom);
+    color: var(--color-headings);
+    font-family: var(--font-body);
+  }
+  
+  

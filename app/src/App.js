@@ -1,46 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import React from "react";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import Navbar from './components/Navbar';
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDhbvqar9DUQjDqbjTpztmOuMKz0OS8Bg8",
-  authDomain: "u-universe.firebaseapp.com",
-  projectId: "u-universe",
-  storageBucket: "u-universe.appspot.com",
-  messagingSenderId: "769321973541",
-  appId: "1:769321973541:web:c12af142520d7cddcecccc",
-  measurementId: "G-GVR4D9F52B"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ContactUs from './pages/ContactUs/ContactUs';
+import Privacy from './pages/Privacy/Privacy';
+import Header from './components/UI/Header/Header';
+import Footer from './components/UI/Footer/Footer';
+import StartPage from './pages/StartPage/StartPage';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <div className="main-content">
+          <StartPage />
+          <Switch>
+            <Route path="/contactus" component={ContactUs} />
+            <Route path="/privacy" component={Privacy} />
+            {/* Uncomment this if you have a Home component */}
+            {/* <Route exact path="/" component={Home} /> */}
+          </Switch>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
