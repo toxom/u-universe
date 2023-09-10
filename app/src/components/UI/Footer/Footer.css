@@ -6,10 +6,10 @@
     align-items: center;
     background: rgba(255, 255, 255, 0.15);
     background-color: #FFC100;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
     position: bottom;
+    padding: 20px;
     bottom: 0;
     width: 100%;
     box-sizing: border-box; /* New line */

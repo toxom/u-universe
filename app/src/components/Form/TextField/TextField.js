@@ -1,7 +1,13 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 
-const EmailTextField = ({ label, variant, ...props }) => {
+const EmailTextField = ({ label, variant, borderRadius, width, ...props }) => {
+  const inputStyle = {
+    borderColor: 'black', // Set the border color to black
+    borderRadius: borderRadius || '0px', // Set the border radius (default to 'px' if not provided),
+    width: width || '100%', // Set the width (default to '100%' if not provided)
+  };
+
   return (
     <TextField
       label={label || "Email"}
@@ -13,9 +19,7 @@ const EmailTextField = ({ label, variant, ...props }) => {
         },
       }}
       InputProps={{
-        style: {
-          borderColor: 'black', // Set the border color to black
-        },
+        style: inputStyle, // Apply the inputStyle object here
       }}
       {...props}
     />

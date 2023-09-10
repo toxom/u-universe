@@ -1,26 +1,68 @@
 .CTA {
+  /* Background color for the entire CTA component */
+  /* background-color: #f2f2f2; */
 
-  background-color: #f2f2f2; // Background color for the entire CTA component
+  
 
-    &__form {
-      display: flex;
+  &__form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 0;
+    margin-left: 20%; /* Adjust left margin for smaller screens */
+    margin-right: 20%; /* Adjust right margin for smaller screens */
+    text-align: center; /* Center text horizontally */
+    justify-content: center; /* Center text vertically */
+    font-size: 24px;
+
+    
+
+
+    /* Media query for screens with a maximum width of 768px */
+    @media (max-width: 768px) {
+      margin-left: 0%; /* Adjust left margin for smaller screens */
+      margin-right: 0%; /* Adjust right margin for smaller screens */
+    }
+
+    /* Media query for screens with a maximum width of 480px */
+    @media (max-width: 480px) {
       flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-      width: 70%; // Set the width to 70% of the parent container
-      margin: auto; // Center the form horizontally
-    }
-  
-    &__email-field {
-      background-color: white; // Background color for the email field
-
-      // Custom styling for the email TextField
-    }
-  
-    &__submit-button {
-      background-color: #4CAF50; // Background color for the submit button
-      color: white; // Text color for the submit button
-      // Custom styling for the submit Button
+      margin-left: 0%; /* Adjust left margin for smaller screens */
+      margin-right: 0%; /* Adjust right margin for smaller screens */
     }
   }
-  
+
+  &__email-field {
+    background-color: white; // Background color for the email field
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    margin-left: 20%; /* Adjust left margin for smaller screens */
+    margin-right: 20%; /* Adjust right margin for smaller screens */
+
+    /* Media query for screens with a maximum width of 768px */
+    @media (max-width: 768px) {
+      margin-left: 0%; /* Adjust left margin for smaller screens */
+      margin-right: 0%; /* Adjust right margin for smaller screens */
+    }
+
+    /* Media query for screens with a maximum width of 480px */
+    @media (max-width: 480px) {
+      flex-direction: column;
+      margin-left: 0%; /* Adjust left margin for smaller screens */
+      margin-right: 0%; /* Adjust right margin for smaller screens */
+    }
+
+
+
+
+    /* Custom styling for the email TextField */
+  }
+
+  &__submit-button {
+    background-color: #4CAF50; // Background color for the submit button
+    color: white; // Text color for the submit button
+    /* Custom styling for the submit Button */
+  }
+}
+
+/* These styles are outside the .CTA selector, so they apply globally */

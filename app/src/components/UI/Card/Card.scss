@@ -3,29 +3,63 @@
     flex-direction: column; /* Change flex direction to column */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin: 16px;
-    background-color: #ffffff;
+    padding: 16px 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 20%; 
+    margin-right: 20%; 
+    background-color: #FFC100;
     position: relative; /* Add relative positioning */
-    overflow: hidden; /* Hide the overflow content when not expanded */
-    max-height: 100px; /* Adjust this value based on your design */
     transition: max-height 0.3s ease-in-out; /* Add this line for smooth transition */
   
     &.expanded {
-      max-height: 1000px; /* Adjust this value to accommodate the expanded content */
+      display: flex;
+      transition: max-height 0.3s ease-in-out; /* Add this line for smooth transition */
+      max-height: max-content; /* Allow the card to expand based on content */
+
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 15%; /* Adjust left margin for medium-sized screens */
+      margin-right: 15%; /* Adjust right margin for medium-sized screens */
+    }
+  
+    /* Media query for screens with a maximum width of 480px */
+    @media (max-width: 480px) {
+      margin-left: 10%; /* Adjust left margin for smaller screens */
+      margin-right: 10%; /* Adjust right margin for smaller screens */
     }
   
     .card-fixed-text {
       /* Your styling for fixed text */
-      margin-bottom: 16px; /* Add margin to create space for expanded text */
+      margin-bottom: 4px; /* Add margin to create space for expanded text */
+      margin-right: 38px; /* Add margin to the right of fixed text (adjust the value as needed) */
+      padding-right:4px;
       user-select: none; /* Prevent text selection for fixed text */
+      font-weight: 500;
     }
+
+    @media (max-width: 768px) {
+      font-size:smaller;
+    }
+  
+    /* Media query for screens with a maximum width of 480px */
+    @media (max-width: 480px) {
+      font-size:small;
+    }
+  
+    
   
     .card-content {
       /* Your styling for content */
       padding-bottom: 16px; /* Add padding to the bottom when the card is expanded */
       user-select: none; /* Prevent text selection for fixed text */
-      
+
+      p.additional-text {
+        max-width: 100%; /* Limit the width of the additional text */
+        margin-bottom: 0px; /* Add margin to create space for expanded text */
+        word-wrap: break-word; /* Enable text wrapping for long words */
+      }
     }
   
     .card-arrow {
@@ -40,10 +74,13 @@
       font-size: 18px; /* Adjust the size of the arrow icon */
       width: 32px; /* Adjust the size of the circle */
       height: 32px; /* Adjust the size of the circle */
-      background-color: #FFC100;
-      color: black;
+      background-color: black;
+      color: white;
       border-radius: 50%; /* Make it a circle */
       transition: background-color 0.3s ease-in-out; /* Add this line for smooth transition */
     }
+
+    margin-bottom: 4px; /* Adjust the value as needed */
+
   }
   

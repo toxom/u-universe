@@ -31,9 +31,14 @@ const Card = ({ children, fixedText, additionalText }) => {
           {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
         </div>
         <div className="card-content">
-          {expanded && <div>{additionalText}</div>} {/* This will only show when expanded */}
+          {expanded && (
+            <p className="additional-text">
+              {additionalText}
+            </p>
+          )}
           {expanded && children} {/* Optional: any common content */}
         </div>
+
       </div>
     );
   };

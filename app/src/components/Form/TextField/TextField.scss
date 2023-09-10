@@ -1,0 +1,27 @@
+/* Define custom styles for your TextField */
+.EmailTextField {
+    display: flex;
+    margin-bottom: 16px; /* Adjust margin as needed */
+  }
+  
+  .InputLabel {
+    color: black; /* Label text color */
+    margin-bottom: 8px; /* Adjust spacing between label and input */
+  }
+  
+  .Input {
+    border: 1px solid black; /* Border color */
+    border-radius: 0px; /* Border radius, default to '0px' */
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    transition: border-color 0.3s ease; /* Add transition for border-color */
+  
+    &.outlined {
+      border-style: solid;
+    }
+  
+    &:focus {
+      border-color: red; /* Change border color on focus */
+    }
+  }
+  

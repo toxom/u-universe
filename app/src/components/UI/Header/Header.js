@@ -2,10 +2,11 @@ import React from "react";
 import { Button } from "@mui/material";
 import "./Header.css";
 
+
 const Header = () => {
   return (
     <header className="header">
-      <h2 className="heading">U-universe</h2>
+      <h1 className="heading">U-universe</h1>
       <nav className="menu">
         <ul className="menu-list">
           <li><a href="/">Home</a></li>
@@ -24,3 +25,4 @@ const Header = () => {
 };
 
 export default Header;
+

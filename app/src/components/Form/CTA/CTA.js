@@ -1,6 +1,6 @@
 import React from 'react';
 import './CTA.scss';
-import Button from '../../Button/Button';
+import Subscribe from '../../Button/Subscribe';
 import EmailTextField from '../TextField/TextField';
 
 
@@ -14,9 +14,9 @@ const CTA = () => {
     <div className="CTA">
       <form className="CTA__form" onSubmit={handleSubmit}>
         <EmailTextField className="CTA__email-field" label="Enter Your Email" />
-        <Button className="CTA__submit-button" variant="contained" type="submit">
+        <Subscribe className="CTA__submit-button" variant="contained" type="submit">
           Subscribe
-        </Button>
+        </Subscribe>
       </form>
     </div>
   );

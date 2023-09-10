@@ -1,0 +1,37 @@
+// styles/styles.scss
+
+// Import the Roboto font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+// Global text styles
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5; // Adjust line height as needed
+  color: #333; // Default text color
+}
+
+// Heading styles
+h1 {
+  font-size: 24px; // Adjust heading font size
+  font-weight: 700; // Bold
+  margin-bottom: 20px; // Add margin below headings
+}
+
+h2 {
+  font-size: 20px; // Adjust heading font size
+  font-weight: 500; // Semi-bold
+  margin-bottom: 16px; // Add margin below headings
+}
+
+h3 {
+  font-size: 16px; // Adjust heading font size
+  font-weight: 500; // Semi-bold
+  margin-bottom: 12px; // Add margin below headings
+}
+
+// Paragraph text styles
+p {
+  margin-bottom: 16px; // Add margin below paragraphs
+}
+

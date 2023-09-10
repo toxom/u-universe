@@ -1,0 +1,87 @@
+/* Comparison.scss */
+
+/* Base styles for the custom table container */
+.custom-table-container {
+    /* Your existing styles here */
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    user-select: none;
+    margin-left: 40%;
+
+  }
+  
+  /* Base styles for the table header */
+  .MuiTableHead-root {
+    /* Your existing styles here */
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 40%;
+
+  }
+  
+  /* Base styles for table rows */
+  .MuiTableRow-root {
+    /* Your existing styles here */
+    &:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  }
+  
+  /* Base styles for table cells */
+  .MuiTableCell-root {
+    /* Your existing styles here */
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 40%;
+
+  }
+  
+  /* Base styles for the tick icons */
+  .MuiTableCell-root:nth-child(2),
+  .MuiTableCell-root:nth-child(3) {
+    /* Your existing styles here */
+    font-size: 20px;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 40%;
+
+  }
+  
+  /* Additional styles for user-select across all elements */
+  .custom-table-container, .MuiTableCell-root, .MuiTableHead-root {
+    /* Your existing styles here */
+    user-select: none;
+    -webkit-user-select: none; /* For webkit-based browsers like Safari */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media query for screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    .custom-table-container, .MuiTableCell-root, .MuiTableHead-root {
+      font-size: 16px; /* Adjust the font size for medium-sized screens */
+      
+    }
+  }
+  
+  /* Media query for screens with a maximum width of 480px */
+  @media (max-width: 480px) {
+    .custom-table-container, .MuiTableCell-root, .MuiTableHead-root {
+      width: 100%; /* Adjust the width for smaller screens */
+      font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+  }
+  

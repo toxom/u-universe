@@ -1,4 +1,169 @@
 .start-page {
-    padding: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.start-page h1 {
+  margin-top: 20px; /* Add margin to separate from other elements */
+  margin-left: 20%; /* Adjust left margin for medium-sized screens */
+  margin-right: 20%; /* Adjust right margin for medium-sized screens */
+  text-align: center; /* Center text horizontally */
+  font-size: 32px;
+
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .start-page h1 {
+    margin-left: 15%; /* Adjust left margin for medium-sized screens */
+    margin-right: 15%; /* Adjust right margin for medium-sized screens */
+    font-size: 24px;
   }
-  
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .start-page h1 {
+    margin-left: 10%; /* Adjust left margin for smaller screens */
+    margin-right: 10%; /* Adjust right margin for smaller screens */
+    font-size: 20px;
+
+  }
+}
+
+.start-page h2 {
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  margin-left: 20%; /* Adjust left margin for medium-sized screens */
+  margin-right: 20%; /* Adjust right margin for medium-sized screens */
+  justify-content: center; /* Center text vertically */
+  align-items: center;
+  font-size: 28px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .start-page h2 {
+    margin-left: 15%; /* Adjust left margin for medium-sized screens */
+    margin-right: 15%; /* Adjust right margin for medium-sized screens */
+    font-size: 24px;
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .start-page h2 {
+    margin-left: 10%; /* Adjust left margin for smaller screens */
+    margin-right: 10%; /* Adjust right margin for smaller screens */
+    font-size: 20px;
+
+  }
+}
+
+.start-page h3 {
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center; /* Center text vertically */
+  align-items: center;
+  font-size: 24px;
+
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .start-page h3 {
+    margin-left: 15%; /* Adjust left margin for medium-sized screens */
+    margin-right: 15%; /* Adjust right margin for medium-sized screens */
+    font-size: 20px;
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .start-page h3 {
+    margin-left: 10%; /* Adjust left margin for smaller screens */
+    margin-right: 10%; /* Adjust right margin for smaller screens */
+    font-size: 16px;
+
+  }
+}
+
+.start-page p {
+  text-align: justify; /* Justify text within <p> elements */
+  font-size: 12px;
+}
+
+.start-page img {
+  max-width: 50%; /* Ensure images don't exceed their container width */
+  margin: 10px auto; /* Center the image horizontally */
+  display: block; /* Remove any default inline spacing */
+
+}
+
+.start-page .card{
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.start-page .how-it-works {
+  background-color: #FFC100 !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  margin-left: 20%; /* Adjust left margin for medium-sized screens */
+  margin-right: 20%; /* Adjust right margin for medium-sized screens */
+
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .start-page .how-it-works {
+    margin-left: 0%; /* Adjust left margin for medium-sized screens */
+    margin-right: 0%; /* Adjust right margin for medium-sized screens */
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .start-page .how-it-works {
+    margin-left: 0%; /* Adjust left margin for smaller screens */
+    margin-right: 0%; /* Adjust right margin for smaller screens */
+  }
+}
+
+.start-page .first-cta {
+  flex-direction: column;
+  background-color: #FFC100 !important;
+  border-radius: 10px !important;
+}
+
+
+.start-page .last-cta {
+  background-color: #FFC100 !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  margin-left: 20%; /* Adjust left margin for medium-sized screens */
+  margin-right: 20%; /* Adjust right margin for medium-sized screens */
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .start-page .last-cta {
+    margin-left: 0%; /* Adjust left margin for medium-sized screens */
+    margin-right: 0%; /* Adjust right margin for medium-sized screens */
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .start-page .last-cta {
+    margin-left: 0%; /* Adjust left margin for smaller screens */
+    margin-right: 0%; /* Adjust right margin for smaller screens */
+  }
+}
+
+
