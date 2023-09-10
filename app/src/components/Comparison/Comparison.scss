@@ -9,7 +9,6 @@
     background-color: #f0f0f0;
     margin: 0 auto;
     user-select: none;
-    margin-left: 40%;
 
   }
   
@@ -22,8 +21,6 @@
     margin: 0 auto;
     cursor: pointer;
     user-select: none;
-    margin-left: 40%;
-
   }
   
   /* Base styles for table rows */
@@ -45,8 +42,6 @@
     text-align: center;
     cursor: pointer;
     user-select: none;
-    margin-left: 40%;
-
   }
   
   /* Base styles for the tick icons */
@@ -57,8 +52,6 @@
     vertical-align: top;
     cursor: pointer;
     user-select: none;
-    margin-left: 40%;
-
   }
   
   /* Additional styles for user-select across all elements */
@@ -72,8 +65,8 @@
   /* Media query for screens with a maximum width of 768px */
   @media (max-width: 768px) {
     .custom-table-container, .MuiTableCell-root, .MuiTableHead-root {
+      width: 90%; /* Adjust the width for medium-sized screens */
       font-size: 16px; /* Adjust the font size for medium-sized screens */
-      
     }
   }
   
