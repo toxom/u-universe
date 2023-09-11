@@ -2,6 +2,9 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center horizontally within the .start-page container */
+  
+
 
 }
 
@@ -133,10 +136,9 @@
   }
 }
 
-.start-page .first-cta {
-  flex-direction: column;
-  background-color: #FFC100 !important;
-  border-radius: 10px !important;
+.start-page .CTA {
+
+
 }
 
 

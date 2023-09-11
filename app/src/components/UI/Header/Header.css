@@ -1,65 +1,91 @@
+/* Header container */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #FFC100;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #FFC100;
+  border-radius: 8px;
+  transition: background-color 0.3s ease; /* Add a transition effect for background color */
+}
+
+/* Header hover effect */
+.header:hover {
+  background-color: white; /* Change the background color on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Heading styles */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  letter-spacing: 3px;
+}
+
+/* Heading hover effect */
+.heading:hover {
+  background-color: red; /* Change the background color on hover */
+}
+
+/* Menu styles */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Menu list items */
+.menu li {
+  margin-right: 20px;
+}
+
+/* Menu links */
+.menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Media query for small screens */
+@media (max-width: 500px) {
+  .menu ul {
+    flex-direction: column;
   }
 
-  .heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #FFC100;
-    border-radius: 8px;
-    letter-spacing: 3px;
-  }
-  
-  .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
   .menu li {
-    margin-right: 20px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  @media (max-width: 500px) {
-    .menu ul {
-      flex-direction: column;
-    }
-  
-    .menu li {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-  
-  .menu-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Add this line to align menu items evenly */
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-list li {
-    margin-right: 20px;
-  }
-  
-  .menu-list li:last-child {
     margin-right: 0;
+    margin-bottom: 10px;
   }
-  
+}
+
+/* Menu list styles */
+.menu-list {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu list item styles */
+.menu-list li {
+  margin-right: 20px;
+}
+
+/* Remove right margin from the last menu list item */
+.menu-list li:last-child {
+  margin-right: 0;
+}
+
+/* Menu link hover effect */
+.menu a:hover {
+  color: #FFC100; /* Change the text color on hover */
+  text-decoration: underline; /* Add underline on hover */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition effect */
+}

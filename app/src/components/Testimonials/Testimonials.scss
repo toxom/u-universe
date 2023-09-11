@@ -1,66 +1,78 @@
-/* Testimonials.scss */
-
-.testimonials-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-}
+/* Add your CSS styling here */
 
 .testimonials-container {
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    background-color: #FFC100;
-    border: 1px solid #ccc;
-    padding: 4px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 4px; /* Add margin to create space between containers */
-}
-
-.upper-section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    border: 1px solid #ccc;
-    height: 200px;
-}
-
-.upper-section p {
-    margin: 0;
-}
-
-.lower-section {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    align-items: center; /* Center align items horizontally */
-    text-align: center; /* Center-align text within the container */
-}
-
-.text-content {
-    margin-top: 0; /* Adjust the top margin to reduce the gap */
-    padding: 4px;
-}
-
-.name {
-    font-weight: bold;
-    margin-bottom: 8px;
-    letter-spacing: 2px; /* Add 20% letter spacing */
-    text-align: center; /* Center-align the name text */
-}
-
-.description {
-    letter-spacing: 2px; /* Add 20% letter spacing */
-    text-align: center; /* Center-align the description text */
-}
-
-
-.avatar {
     align-items: center;
+    text-align: center;
+    padding: 20px; /* Replace the backtick (`¨`) with a semicolon (`;`) here */
+    transition: all 0.3s ease; /* Add a transition for the entire avatars container */
+    background-color: #f0f0f0; /* Replace "your-color" with the desired background color */
+    border-radius: 4px;
 }
+  
+  .avatars {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease; /* Add a transition for the entire avatars container */
+    border-radius: 50%;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
 
-.avatar img {
-    width: 120px;
-    height: 120px;
-}
+  
+    &:hover {
+      border-color: 2px solid #FFFFE0; /* Change border color on hover */
+      border-radius: 50%;
+    }
+  }
+  
+  .selected-avatar {
+    border-radius: 50%;
+    border-color: 2px solid green; /* Change border color on hover */
 
+    transform: scale(1.5); /* Add a scale effect for the selected avatar */
+    transition: all 0.3s ease; /* Add a transition for the entire avatars container */
+
+
+  }
+  
+  .testimonial-details {
+    text-align: center;
+  
+    h2 {
+      font-size: 1.5rem; /* Adjust the font size for the name */
+    }
+  
+    p {
+      font-size: 1rem; /* Adjust the font size for the title */
+      color: #555; /* Customize the color of the title */
+    }
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    max-width: 400px; /* Adjust the width as needed */
+    line-height: 1.5;
+    display: flex; /* Center text vertically */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+
+    h2 {
+        font-size: 1.5rem; /* Adjust the font size for the name */
+      }
+  
+    p {
+      font-size: 1rem; /* Adjust the font size for the testimonial text */
+      color: #333; /* Customize the color of the testimonial text */
+    }
+  }
+  

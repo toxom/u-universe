@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Privacy = () => {
+const Privacy = ({ onClose }) => {
+  const modalContentStyle = {
+    maxHeight: '400px', // Adjust the max height as needed
+    overflowY: 'auto', // Enable vertical scroll if content overflows
+  };
+
   return (
-    <div>
+    <div style={modalContentStyle}>
       <h1>Privacy Policy</h1>
       
       <h2>Introduction</h2>

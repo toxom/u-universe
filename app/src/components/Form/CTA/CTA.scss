@@ -1,68 +1,99 @@
-.CTA {
-  /* Background color for the entire CTA component */
-  /* background-color: #f2f2f2; */
-
-  
-
-  &__form {
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .CTA-container {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px 0;
-    margin-left: 20%; /* Adjust left margin for smaller screens */
-    margin-right: 20%; /* Adjust right margin for smaller screens */
-    text-align: center; /* Center text horizontally */
-    justify-content: center; /* Center text vertically */
-    font-size: 24px;
+    flex-direction: column; /* Stack .CTA divs vertically for smaller screens */
+    justify-content: space-between; /* Add space between .CTA divs */
+    align-items: center; /* Center the .CTA divs horizontally */
 
-    
-
-
-    /* Media query for screens with a maximum width of 768px */
-    @media (max-width: 768px) {
-      margin-left: 0%; /* Adjust left margin for smaller screens */
-      margin-right: 0%; /* Adjust right margin for smaller screens */
-    }
-
-    /* Media query for screens with a maximum width of 480px */
-    @media (max-width: 480px) {
-      flex-direction: column;
-      margin-left: 0%; /* Adjust left margin for smaller screens */
-      margin-right: 0%; /* Adjust right margin for smaller screens */
-    }
   }
 
-  &__email-field {
-    background-color: white; // Background color for the email field
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
-    margin-left: 20%; /* Adjust left margin for smaller screens */
-    margin-right: 20%; /* Adjust right margin for smaller screens */
-
-    /* Media query for screens with a maximum width of 768px */
-    @media (max-width: 768px) {
-      margin-left: 0%; /* Adjust left margin for smaller screens */
-      margin-right: 0%; /* Adjust right margin for smaller screens */
-    }
-
-    /* Media query for screens with a maximum width of 480px */
-    @media (max-width: 480px) {
-      flex-direction: column;
-      margin-left: 0%; /* Adjust left margin for smaller screens */
-      margin-right: 0%; /* Adjust right margin for smaller screens */
-    }
 
 
-
-
-    /* Custom styling for the email TextField */
+  .CTA {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
-  &__submit-button {
-    background-color: #4CAF50; // Background color for the submit button
-    color: white; // Text color for the submit button
-    /* Custom styling for the submit Button */
+  /* Add a separate class for the illustration to control its styling */
+  .CTA-illustration {
+    width: 100%; /* Ensure the illustration takes up the full width */
+    margin-bottom: 20px; /* Adjust margin for spacing */
   }
 }
 
-/* These styles are outside the .CTA selector, so they apply globally */
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .CTA-container {
+    display: flex;
+    flex-direction: column; /* Stack .CTA divs vertically for smaller screens */
+    align-items: center; /* Center the .CTA divs horizontally */
+    margin-left: 10%; /* Adjust left margin for smaller screens */
+    margin-right: 10%; /* Adjust right margin for smaller screens */
+  }
+
+  .CTA {
+    width: 300px; /* Keep a fixed width for the .CTA div */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Add a separate class for the illustration to control its styling */
+  .CTA-illustration {
+    width: 100%; /* Ensure the illustration takes up the full width */
+    margin-bottom: 20px; /* Adjust margin for spacing */
+  }
+}
+
+.CTA-container {
+  /* Background color for the entire CTA container */
+  display: flex;
+  justify-content:center; /* Add space between .CTA divs */
+  margin-left: 30%; /* Adjust left margin for smaller screens */
+  margin-right: 30%; /* Adjust right margin for smaller screens */
+  gap: 10px;
+  align-items: center; /* Center the .CTA divs horizontally */
+}
+
+.CTA {
+  /* Background color for the individual CTA components */
+  padding: 20px; /* Add padding to create space inside the component */
+  background-color: white;
+  border: 1px solid black; /* 1px solid black border */
+  border-radius: 4px;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin to separate the CTA components vertically */
+  display: flex;
+  flex-direction: column; /* Stack .CTA divs vertically for smaller screens */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+
+  
+}
+
+.CTA:hover {
+  background-color: rgb(241, 241, 241); /* Change the background color on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+
+}
+
+/* Styling for paragraphs (p) */
+.CTA p {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center; /* Center the text within the paragraphs */
+}
+
+/* Styling for heading elements (h1, h2, h3) */
+.CTA h1, .CTA h2, .CTA h3 {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-bottom: 15px; /* Adjust the margin as needed */
+  text-align: center; /* Center the text within the headings */
+}
+
+.CTA .Subscribe {
+  text-align: center; /* Center the text within the button */
+}
