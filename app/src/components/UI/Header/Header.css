@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center vertically */
-  margin: 10px;
-  padding: 10px 20px;
+  margin: 20px;
+  padding: 0px 20px;
   background-color: #FFC100;
   border-radius: 8px;
   transition: background-color 0.3s ease; /* Add a transition effect for background color */
@@ -18,13 +18,15 @@
 
 /* Heading styles */
 .heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center vertically */
+
   margin: 10px;
   padding: 10px 20px;
   border-radius: 8px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
+  margin-block: auto;
+  color: green;
+  font-size:larger;
+  ;
 }
 
 /* Heading hover effect */
@@ -38,6 +40,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  
 }
 
 /* Menu list items */

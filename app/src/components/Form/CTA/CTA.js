@@ -5,11 +5,11 @@ import instructions1 from 'D:/OneDrive/Projektit/Repositories/u-universe/app/src
 import Subscribe from '../../Button/Subscribe';
 import Modal from '../../Modal/Modal';
 import Optin from '../Optin/Optin';
-import Signup from '../Signup/Signup'; // Import the Signup component
+import Expert from '../Expert/Expert'; // Import the Expert component
 
 const CTA = () => {
   const [isOptinModalOpen, setOptinModalOpen] = useState(false);
-  const [isSignupModalOpen, setSignupModalOpen] = useState(false); // Add state for signup modal
+  const [isExpertModalOpen, setExpertModalOpen] = useState(false); // Add state for Expert modal
 
   const openOptinModal = () => {
     setOptinModalOpen(true);
@@ -19,12 +19,12 @@ const CTA = () => {
     setOptinModalOpen(false);
   };
 
-  const openSignupModal = () => {
-    setSignupModalOpen(true);
+  const openExpertModal = () => {
+    setExpertModalOpen(true);
   };
 
-  const closeSignupModal = () => {
-    setSignupModalOpen(false);
+  const closeExpertModal = () => {
+    setExpertModalOpen(false);
   };
 
   return (
@@ -46,7 +46,7 @@ const CTA = () => {
         <h2>Heading</h2>
         <img src={instructions1} alt="Instructions" />
         <p>Another paragraph of text.</p>
-        <Subscribe onClick={openSignupModal} disabled={false}>
+        <Subscribe onClick={openExpertModal} disabled={false}>
           Become an Expert
         </Subscribe>
         <p>
@@ -62,11 +62,11 @@ const CTA = () => {
         </Modal>
       )}
 
-      {/* Render the Signup modal only when isOpen is true */}
-      {isSignupModalOpen && (
-        <Modal isOpen={isSignupModalOpen} onClose={closeSignupModal}>
-          {/* Render the Signup component within the modal */}
-          <Signup onClose={closeSignupModal} />
+      {/* Render the Expert modal only when isOpen is true */}
+      {isExpertModalOpen && (
+        <Modal isOpen={isExpertModalOpen} onClose={closeExpertModal}>
+          {/* Render the Expert component within the modal */}
+          <Expert onClose={closeExpertModal} />
         </Modal>
       )}
     </div>

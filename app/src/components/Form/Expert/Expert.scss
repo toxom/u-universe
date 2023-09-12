@@ -1,0 +1,49 @@
+.expert-container {
+    form {
+      display: grid;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+  
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        text-align: right;
+        margin-bottom: 5px;
+      }
+  
+      /* Adjust the width for input fields */
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        font-size: 16px;
+        height: 40px;
+      }
+  
+      button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+      }
+  
+      /* Add styles for <p> and <h1> elements */
+      p {
+        font-size: 18px; /* Example font size for <p> */
+        margin: 10px 0; /* Example margin for <p> */
+      }
+  
+      h1 {
+        color: red;
+        font-size: 48px;
+      }
+    }
+  }
+  

@@ -1,26 +1,40 @@
-// Optin.js
-
-import React from 'react';
-
+import React, { useState } from 'react';
+import { addSubscription } from '../../../firebase'; // Adjust the import path based on your project structure
 
 const Optin = ({ onClose }) => {
-  // Handle form submission here
-  const handleSubmit = (e) => {
+  const [isSubscribed, setIsSubscribed] = useState(false); // State to track subscription status
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form data submission or any other actions here
-    // For example, you can send an API request to subscribe the user
-    // Close the modal when the action is complete
-    onClose();
+    const email = e.target.email.value;
+
+    try {
+      // Use the addSubscription function from firebase.js
+      await addSubscription(email);
+      console.log('Subscription added successfully.');
+      setIsSubscribed(true); // Set state to indicate successful subscription
+    } catch (error) {
+      console.error('Error adding subscription: ', error);
+    }
   };
 
   return (
     <div>
-      <h1>Subscribe to Next Interview</h1>
-      <p>Please enter your email to subscribe:</p>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Your Email" required />
-        <button type="submit">Subscribe</button>
-      </form>
+      {isSubscribed ? ( // Conditionally render the message if subscribed
+        <>
+          <h1>Subscribed!</h1>
+          <p>Thank you for subscribing.</p>
+        </>
+      ) : (
+        <>
+          <h1>Subscribe to Next Interview</h1>
+          <p>Please enter your email to subscribe:</p>
+          <form onSubmit={handleSubmit}>
+            <input type="email" name="email" placeholder="Your Email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </>
+      )}
     </div>
   );
 };
