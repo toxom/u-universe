@@ -6,11 +6,14 @@ import StartPage from './pages/StartPage/StartPage';
 import Modal from './components/Modal/Modal';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Privacy from './pages/Privacy/Privacy';
+import Terms from './pages/Terms/Terms';
 import ForUsers from './pages/Learn/for-users'; // Import the ForUsers component
 
 function App() {
   const [isContactUsModalOpen, setContactUsModalOpen] = useState(false);
   const [isPrivacyModalOpen, setPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setTermsModalOpen] = useState(false);
+
 
   const openContactUsModal = () => {
     setContactUsModalOpen(true);
@@ -28,6 +31,14 @@ function App() {
     setPrivacyModalOpen(false);
   };
 
+  const openTermsModal = () => {
+    setTermsModalOpen(true);
+  };
+
+  const closeTermsModal = () => {
+    setTermsModalOpen(false);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -37,10 +48,12 @@ function App() {
           <Switch>
             <Route path="/contactus" component={ContactUs} />
             <Route path="/privacy" component={Privacy} />
+            <Route path="/terms" component={Terms} />
+
             <Route path="/for-users" component={ForUsers} /> {/* Add this line */}
           </Switch>
         </div>
-        <Footer openContactUsModal={openContactUsModal} openPrivacyModal={openPrivacyModal} />
+        <Footer openContactUsModal={openContactUsModal} openPrivacyModal={openPrivacyModal} openTermsModal={openTermsModal} />
         {/* Render the Contact Us modal only when isOpen is true */}
         {isContactUsModalOpen && (
           <Modal isOpen={isContactUsModalOpen} onClose={closeContactUsModal}>
@@ -53,6 +66,13 @@ function App() {
             <Privacy onClose={closePrivacyModal} />
           </Modal>
         )}
+        {/* Render the Terms modal only when isOpen is true */}
+        {isTermsModalOpen && (
+          <Modal isOpen={isTermsModalOpen} onClose={closeTermsModal}>
+            <Terms onClose={closeTermsModal} />
+          </Modal>
+        )}
+
       </div>
     </Router>
   );

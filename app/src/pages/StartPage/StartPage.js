@@ -6,6 +6,8 @@ import CTA from '../../components/Form/CTA/CTA';
 import instructions1 from '../../assets/instructions1.svg';
 import '../../styles.scss'; // Import the global stylesheet
 import Testimonials from '../../components/Testimonials/Testimonials';
+import Brochure from '../../pages/StartPage/Brochure/Brochure'; 
+
 
 
 const StartPage = () => {
@@ -14,6 +16,9 @@ const StartPage = () => {
       <h1>Spend your lifetime doing business you enjoy: Empathy-based e-learning </h1>
       <h3>Listen to entrepreneurial mentality from professional interviews brought to you by researchers</h3>
       <CTA />
+
+      <Brochure />
+
 
       {/* Add your CTA component here */}
 

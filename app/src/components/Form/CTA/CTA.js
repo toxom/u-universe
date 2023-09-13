@@ -42,7 +42,7 @@ const CTA = () => {
       </div>
 
       {/* Second CTA */}
-      <div className="CTA">
+      {/* <div className="CTA">
         <h2>Heading</h2>
         <img src={instructions1} alt="Instructions" />
         <p>Another paragraph of text.</p>
@@ -52,7 +52,7 @@ const CTA = () => {
         <p>
           <a href="#">Learn more</a>
         </p>
-      </div>
+      </div> */}
 
       {/* Render the Optin modal only when isOpen is true */}
       {isOptinModalOpen && (

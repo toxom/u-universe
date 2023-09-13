@@ -12,7 +12,7 @@
 
 /* Header hover effect */
 .header:hover {
-  background-color: white; /* Change the background color on hover */
+  background-color: #D03F2C; /* Change the background color on hover */
   transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
@@ -22,16 +22,16 @@
   margin: 10px;
   padding: 10px 20px;
   border-radius: 8px;
-  letter-spacing: 5px;
+  letter-spacing: 1.5px;
   margin-block: auto;
-  color: green;
+  color: white;
   font-size:larger;
   ;
 }
 
 /* Heading hover effect */
 .heading:hover {
-  background-color: red; /* Change the background color on hover */
+  /* background-color: red; */
 }
 
 /* Menu styles */

@@ -1,0 +1,60 @@
+.brochure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .top-row,
+  .row {
+    display: flex;
+    justify-content: space-evenly;  /* Makes sure each section is evenly spaced */
+    margin-bottom: 20px;
+    flex-wrap: wrap;  /* Allows wrapping */
+  }
+  
+  .section {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;  /* Takes up available space */
+    min-width: calc(33.333% - 20px);  /* Optional, to take a third of the container minus margins */
+  }
+  
+  .icon {
+    font-size: 2rem;
+    margin-right: 10px;
+    
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 150px;  /* Sets the maximum width */
+    text-align: left;  /* Aligns text to the left */
+    word-wrap: break-word;  /* Allows long words to break and wrap onto the next line */
+        flex-wrap: wrap;  /* Allows wrapping */
+
+  }
+  
+  
+  h3, p {
+    margin: 5px 0;
+  }
+  
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+      
+    }
+  
+    .section {
+      width: 100%;
+    }
+  }

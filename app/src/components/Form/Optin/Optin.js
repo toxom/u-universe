@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { addSubscription } from '../../../firebase'; // Adjust the import path based on your project structure
+import './Optin.scss';
 
 const Optin = ({ onClose }) => {
   const [isSubscribed, setIsSubscribed] = useState(false); // State to track subscription status
@@ -19,24 +20,25 @@ const Optin = ({ onClose }) => {
   };
 
   return (
-    <div>
-      {isSubscribed ? ( // Conditionally render the message if subscribed
+    <div className="optin-container">
+      {isSubscribed ? (
         <>
-          <h1>Subscribed!</h1>
-          <p>Thank you for subscribing.</p>
+          <h1 className="optin-header">Subscribed!</h1>
+          <p className="optin-text">Thank you for subscribing.</p>
         </>
       ) : (
         <>
-          <h1>Subscribe to Next Interview</h1>
-          <p>Please enter your email to subscribe:</p>
-          <form onSubmit={handleSubmit}>
-            <input type="email" name="email" placeholder="Your Email" required />
-            <button type="submit">Subscribe</button>
+          <h1 className="optin-header">Subscribe to Next Interview</h1>
+          <p className="optin-text">Please enter your email to subscribe:</p>
+          <form className="optin-form" onSubmit={handleSubmit}>
+            <input className="optin-input" type="email" name="email" placeholder="Your Email" required />
+            <button className="optin-button" type="submit">Subscribe</button>
           </form>
         </>
       )}
     </div>
   );
+  
 };
 
 export default Optin;

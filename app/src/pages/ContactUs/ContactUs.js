@@ -5,7 +5,7 @@ const ContactUs = ({ onClose }) => {
     <div>
       <h1>Contact Us</h1>
       <p>
-        If you have any questions or need assistance, please don't hesitate to contact us. We're here to help!
+        If you have any questions or need assistance, please don't hesitate to contact us at info@u-universe.com. We're here to help!
       </p>
     </div>
   );
