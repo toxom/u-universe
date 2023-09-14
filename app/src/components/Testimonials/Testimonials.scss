@@ -3,11 +3,35 @@
 .testimonials-container {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
     text-align: center;
     padding: 30px; /* Replace the backtick (`¨`) with a semicolon (`;`) here */
     transition: all 0.3s ease; /* Add a transition for the entire avatars container */
-    border-radius: 4px;
+    background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
+  }
+
+  /* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .testimonials-container {
+    width: 100%;  /* or set it to 800px or any other value */
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .testimonials-container {
+    width: 100%;  /* or set it to 600px or any other value */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .testimonials-container {
+    width: 100%;  /* or set it to 400px or any other value */
+  }
 }
   
   .avatars {
@@ -34,14 +58,19 @@
   
     &:hover {
       border-color: #FFFFE0; /* Change border color on hover */
+      transform: border-color 0.3s ease;
+
     }
   }
   
   .selected-avatar {
     border-color: green; /* Change border color for selected avatar */
-    transform: scale(2.0); /* Add a scale effect for the selected avatar */
+    transform: scale(1.8); /* Add a scale effect for the selected avatar */
     transition: all 0.7s ease; /* Add a transition for the entire avatars container */
+    border-color: red;
+
   }
+
   
   .testimonial-details {
     text-align: center;
@@ -50,17 +79,20 @@
     h2 {
       font-size: 1.5rem; /* Adjust the font size for the name */
       white-space: nowrap; /* Keep text on a single line */
+      font-weight: bolder;
 
     }
   
     p {
-      font-size: 1rem; /* Adjust the font size for the title */
-      color: #555; /* Customize the color of the title */
+      font-size: 1.2rem; /* Adjust the font size for the name */
+      color: black; /* Customize the color of the title */
       display: flex; /* Center text vertically */
       flex-direction: column; /* Stack elements vertically */
       white-space: nowrap; /* Keep text on a single line */
       align-items: center; /* Center horizontally */
       justify-content: center; /* Center vertically */
+      font-weight: bolder;
+
 
 
     }

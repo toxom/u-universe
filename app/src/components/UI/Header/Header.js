@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "@mui/material";
-import "./Header.css";
-
+import "./Header.scss";
+import logo from '../../../assets/logo.svg'; // Update the path here
 
 const Header = () => {
   return (
     <header className="header">
-      <h1 className="heading">U-universe</h1>
+      <img src={logo} alt="logo" className="logo" />
+      <h1 className="heading">Entrepreneurship Education</h1>
       <nav className="menu">
         <ul className="menu-list">
           <li>
@@ -29,7 +30,4 @@ const Header = () => {
   );
 };
 
-
-
 export default Header;
-

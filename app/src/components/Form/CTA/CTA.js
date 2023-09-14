@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CTA.scss';
-import instructions1 from 'D:/OneDrive/Projektit/Repositories/u-universe/app/src/assets/instructions1.svg';
+import corpart1 from '../../../assets/corpart1.svg';
 import Subscribe from '../../Button/Subscribe';
 import Modal from '../../Modal/Modal';
 import Optin from '../Optin/Optin';
@@ -30,14 +30,14 @@ const CTA = () => {
   return (
     <div className="CTA-container">
       <div className="CTA">
-        <h2>Heading</h2>
-        <img src={instructions1} alt="Instructions" />
-        <p>This is a paragraph of text.</p>
+        <h2>Master Business Fundamentals with Insightful Conversations</h2>
+        <img src={corpart1} alt="b2c" />
+        <p>Be the first to know – join our email waitlist.</p>
         <Subscribe onClick={openOptinModal} disabled={false}>
-          Subscribe to Next Interview
+          Try for free
         </Subscribe>
         <p>
-          <Link to="/for-users">Learn more</Link>
+          {/* <Link to="/for-users">Learn more</Link> */}
         </p>
       </div>
 

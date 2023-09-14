@@ -1,24 +1,51 @@
 /* Header container */
+.logo {
+  width: 120px;  // Set the width
+  height: 120px;  // Set the height
+  margin-bottom: 0px;  // Add some margin between the logo and the heading
+  margin-right: -35px;  // Add some right margin if you want some spacing  
+}
+
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;  // Center items horizontally
   align-items: center; /* Center vertically */
-  margin: 20px;
-  padding: 0px 20px;
-  background-color: #FFC100;
-  border-radius: 8px;
-  transition: background-color 0.3s ease; /* Add a transition effect for background color */
+  background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
+  border: 1px solid transparent;
+  border-radius: 0px;
+  transition: border-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: margin 0.3s ease;
+  transition: box-shadow margin 0.3s ease;
+
+  border-bottom: #333 2px;
+
+
+
 }
 
 /* Header hover effect */
 .header:hover {
-  background-color: #D03F2C; /* Change the background color on hover */
-  transition: background-color 0.3s ease; /* Smooth transition effect */
+  // border-color: #D03F2C;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  transition: box-shadow margin 0.3s ease;
+  margin: 20px 20px 20px 20px;
+  border-radius: 8px;
+
+
+
+
+
+  
+  
+
 }
+
 
 /* Heading styles */
 .heading {
-
+  width: 150px; /* or whatever width you want */
   margin: 10px;
   padding: 10px 20px;
   border-radius: 8px;
@@ -26,6 +53,8 @@
   margin-block: auto;
   color: white;
   font-size:larger;
+  font-family: 'Comfortaa';  /* Add this line */
+
   ;
 }
 

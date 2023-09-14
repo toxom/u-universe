@@ -39,6 +39,11 @@ function App() {
     setTermsModalOpen(false);
   };
 
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap";
+  document.head.appendChild(link);
+
   return (
     <Router>
       <div className="App">

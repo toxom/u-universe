@@ -1,27 +1,30 @@
 /* Define custom styles for your Subscribe button */
 .Subscribe {
   /* Your custom styles here */
-  background-color: #FFC100;
+  background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
   color: blackwhite;
-  border: 1px solid black;
+  border: 1px solid; 
+  border-color: #E9E5DF;
   padding: 10px 20px; /* Adjust padding as needed */
   font-size: 16px; /* Adjust font size as needed */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-weight: bold; /* Adjust font weight as needed */
-  border-radius: 0px; /* Adjust border radius as needed */
+  border-radius: 50px; /* Adjust border radius as needed */
   cursor: pointer;
   transition: background-color 0.3s ease;
   height: 55px;
   width: 300px;
+  font-family: 'Comfortaa';  /* Add this line */
+
 
   &:hover {
-    background-color: #D03F2C;
+    background: #D03F2C;
     color: white;
     transform: scale(1.05) 0.8s; /* Add scaling effect on hover */
   }
 
   &:active {
-    background-color: #ff9900; /* Change background color when button is clicked */
+    background: #ff9900; /* Change background color when button is clicked */
     transform: scale(0.95); /* Add scaling effect on click */
   }
 

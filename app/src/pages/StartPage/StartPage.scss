@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center horizontally within the .start-page container */
-  
-
 
 }
 
@@ -14,6 +12,7 @@
   margin-right: 20%; /* Adjust right margin for medium-sized screens */
   text-align: center; /* Center text horizontally */
   font-size: 32px;
+  font-family: 'Comfortaa';  /* Add this line */
 
 }
 
@@ -39,11 +38,14 @@
 .start-page h2 {
   text-align: center; /* Center text horizontally */
   display: flex;
-  margin-left: 20%; /* Adjust left margin for medium-sized screens */
-  margin-right: 20%; /* Adjust right margin for medium-sized screens */
+  margin-left: 15%; /* Adjust left margin for medium-sized screens */
+  margin-right: 15%; /* Adjust right margin for medium-sized screens */
+  margin-bottom: 0px;
   justify-content: center; /* Center text vertically */
   align-items: center;
-  font-size: 28px;
+  font-size: 24px;
+  font-family: 'Comfortaa';  /* Add this line */
+
 }
 
 /* Media query for screens with a maximum width of 768px */
@@ -51,7 +53,7 @@
   .start-page h2 {
     margin-left: 15%; /* Adjust left margin for medium-sized screens */
     margin-right: 15%; /* Adjust right margin for medium-sized screens */
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -67,10 +69,13 @@
 
 .start-page h3 {
   text-align: center; /* Center text horizontally */
+  margin-bottom: 20px; /* Add margin to separate from other elements */
   display: flex;
   justify-content: center; /* Center text vertically */
   align-items: center;
   font-size: 24px;
+  font-family: 'Comfortaa';  /* Add this line */
+
 
 }
 
@@ -96,6 +101,8 @@
 .start-page p {
   text-align: justify; /* Justify text within <p> elements */
   font-size: 12px;
+  font-family: 'Comfortaa';  /* Add this line */
+
 }
 
 .start-page img {
@@ -110,46 +117,117 @@
 }
 
 .start-page .how-it-works {
-  background-color: #FFC100 !important;
-  border-radius: 10px !important;
-  padding: 20px !important;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
+  
+  // background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 20%; /* Adjust left margin for medium-sized screens */
   margin-right: 20%; /* Adjust right margin for medium-sized screens */
-
+  
 }
 
-/* Media query for screens with a maximum width of 768px */
+
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+.start-page .how-it-works  {
+  width: 100%;  /* or set it to 800px or any other value */
+  margin-left: -3%;
+
+}
+}
+
+/* For screens smaller than 768px */
 @media (max-width: 768px) {
-  .start-page .how-it-works {
-    margin-left: 0%; /* Adjust left margin for medium-sized screens */
-    margin-right: 0%; /* Adjust right margin for medium-sized screens */
-  }
+.start-page .how-it-works  {
+  width: 100%;  /* or set it to 600px or any other value */
+  margin-left: 0%;
+  
+}
 }
 
-/* Media query for screens with a maximum width of 480px */
+/* For screens smaller than 480px */
 @media (max-width: 480px) {
-  .start-page .how-it-works {
-    margin-left: 0%; /* Adjust left margin for smaller screens */
-    margin-right: 0%; /* Adjust right margin for smaller screens */
-  }
+.start-page .how-it-works  {
+  width: 100%;  /* or set it to 400px or any other value */
+  margin-left: 0%;
+
 }
+}
+
+ 
+
+.start-page .how-it-works-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  // background-color: white;
+  border: 1px solid; 
+  border-color: #E9E5DF;  
+  border-radius: 10px;
+  background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
+  padding: 10px;
+  margin-left: 25%;
+  width: 50%;
+
+
+
+
+
+  img {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  h3 {
+    display: flex;
+    
+    text-align: center;
+    margin-left: 5%; /* Adjust left margin for smaller screens */
+    margin-right: 5%; /* Adjust right margin for smaller screens */
+    transition: transform 0.3s ease;  /* Add this line */
+
+    
+
+  }
+
+  :hover{
+    transform: scale(1.05);
+    font-weight: bolder;
+  }
+
+}
+
+
+
+
+
 
 .start-page .CTA {
-
-
 }
 
-
 .start-page .last-cta {
-  background-color: #FFC100 !important;
+  background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
   border-radius: 10px !important;
   padding: 20px !important;
   margin-top: 20px !important;
   margin-bottom: 20px !important;
   margin-left: 20%; /* Adjust left margin for medium-sized screens */
   margin-right: 20%; /* Adjust right margin for medium-sized screens */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  border: 1px solid; 
+  border-color: #E9E5DF;
+}
+
+.start-page .last-cta:hover {
+  transform: scale(0.8); /* Scale down to 80% of original size when hovered */
+  font-weight: bolder;
 }
 
 /* Media query for screens with a maximum width of 768px */
@@ -167,5 +245,96 @@
     margin-right: 0%; /* Adjust right margin for smaller screens */
   }
 }
+
+/* Toggle switch container */
+.switch {
+  position: relative;
+  display: block; /* or use 'display: inline-block' depending on your layout */
+  width: 300px;
+  height: 34px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-color: #cc800f;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  
+}
+
+/* Custom slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  background-color: #F3F2EF;
+  transition: .4s;
+  border-radius: 34px;
+  border: 1px solid; 
+  border-color: #E9E5DF;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 150px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 15px;
+  border: 1px solid; 
+  border-color: #E9E5DF;
+  top: 8%;  /* Move it to the vertical center */
+
+}
+
+/* When checked, change slider color */
+input:checked + .slider {
+  border-color: #E9E5DF;
+}
+
+/* When checked, move the circle to the other side */
+input:checked + .slider:before {
+  transform: translateX(140px);  /* This value will need to be adjusted */
+  
+}
+
+.slider-text {
+  position: absolute;
+  top: 50%;
+  font-family: 'Comfortaa';  /* Add this line */
+  font-weight: bold;
+  font-size: 12px; /* or whatever size you want */
+  color: black; /* or whatever color you want */
+  transform: translateY(-50%); /* To align it vertically centered */
+  
+  
+  
+}
+
+.slider-text-left {
+  left: 11%;
+}
+
+.slider-text-middle {
+  left: 50%;
+}
+
+.slider-text-right {
+  right: 15%;
+}
+
 
 

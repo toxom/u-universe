@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
+
+    
+    
   }
   
   .top-row,
@@ -11,22 +15,45 @@
     justify-content: space-evenly;  /* Makes sure each section is evenly spaced */
     margin-bottom: 20px;
     flex-wrap: wrap;  /* Allows wrapping */
+    gap: 15px;
   }
   
   .section {
     margin: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    padding: 5px;
     flex-direction: row;
+    background: linear-gradient(to right, #FFC100, #FFA500); /* Linear gradient from left to right */
     flex: 1;  /* Takes up available space */
     min-width: calc(33.333% - 20px);  /* Optional, to take a third of the container minus margins */
+    
+    /* Enhanced Glassmorphism style */
+    backdrop-filter: blur(10px); /* Increased blur */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Darker outer shadow */
+                0 1px 3px rgba(0, 0, 0, 0.1), /* Darker inner shadow */
+                inset 0 4px 6px rgba(255, 255, 255, 0.1), /* More prominent inner white shadow */
+                inset 0 1px 1px rgba(255, 255, 255, 0.1); /* More prominent additional inner white shadow */
+    border: 1px solid; 
+    border-color: #E9E5DF;
+    transition: transform 0.3s ease;  /* Add this line */
+
+
+
   }
+  
+  .section:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+  }
+
+
   
   .icon {
     font-size: 2rem;
-    margin-right: 10px;
-    
+    margin-right: 10px;    
   }
   
   .text-container {
@@ -37,14 +64,24 @@
     max-width: 150px;  /* Sets the maximum width */
     text-align: left;  /* Aligns text to the left */
     word-wrap: break-word;  /* Allows long words to break and wrap onto the next line */
-        flex-wrap: wrap;  /* Allows wrapping */
+    flex-wrap: wrap;  /* Allows wrapping */
+    
 
   }
-  
-  
-  h3, p {
+
+  .text-container p {
     margin: 5px 0;
+    font-size: 14px;  // or any other size you prefer
+    text-align: left;
+    font-weight: bold;
   }
+  
+  h3 {
+    margin: 5px 0;
+    
+  }
+
+
   
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {

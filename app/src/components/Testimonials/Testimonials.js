@@ -9,27 +9,27 @@ import Avatar4 from '../../assets/testimonials/avatar4.svg';
 const testimonialsData = [
   {
     id: 1,
-    name: 'John Doe',
-    title: 'CEO',
-    testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: 'Irene Buller',
+    title: 'Senior Consultant, EY, Switzerland',
+    testimonial: 'I’ve seen so many interviews with entrepreneurs, including on educational platforms, but this is the first time I’ve seen this exact effectuation approach. I work in a research environment and I see that the use of research findings in interviews adds a special character and makes them truly engaging and really useful.',
   },
   {
     id: 2,
-    name: 'Jane Smith',
-    title: 'Marketing Manager',
-    testimonial: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    name: 'Bojan Pantic',
+    title: 'Business Analyst, Serbia',
+    testimonial: 'I have a background in academic research and applied research in business but this is the first time I see research insights in an interview format. I love it!',
   },
   {
     id: 3,
-    name: 'Bob Johnson',
-    title: 'Designer',
-    testimonial: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    name: 'Anton Fedosin',
+    title: 'CEO, Zenmoney, Israel',
+    testimonial: 'I found it useful to study international experience in an entrepreneurial environment through the interview on the platform. It helped me with my business project a lot.',
   },
   {
     id: 4,
-    name: 'Alice Brown',
-    title: 'Developer',
-    testimonial: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    name: 'Janne Ruponen',
+    title: 'Co-founder, SOFTA, Finland',
+    testimonial: 'I\'ve listened to a lot of podcasts featuring entrepreneurs, and the majority of these interviews clearly lack real-life context. When I listen to U-universe interviews, I not only get answers to practical questions like "How did you achieve this?" but also to questions like "Why?" It reminds me of case studies where I can see the whole picture and all the connections.'
   },
 ];
 
@@ -41,7 +41,9 @@ const Testimonials = () => {
   };
 
   return (
+    
     <div className="testimonials-container">
+      <h1>Testimonials</h1>
       <div className="avatars">
         {testimonialsData.map((testimonial) => (
           <img
@@ -59,6 +61,7 @@ const Testimonials = () => {
       </div>
       <div className="testimonial-text">
         <p>{selectedTestimonial.testimonial}</p>
+        
       </div>
     </div>
   );

@@ -34,6 +34,20 @@ const addSubscription = async (email) => {
   }
 };
 
+// Add a subscription to the Firestore collection
+const addSubscription2 = async (email) => {
+  try {
+    // Add a new document with a generated ID
+    const docRef = await addDoc(collection(db, 'subscriptions-b2b'), {
+      email: email,
+      timestamp: serverTimestamp(),
+    });
+    console.log('Document written with ID: ', docRef.id);
+  } catch (e) {
+    console.error('Error adding document: ', e);
+  }
+};
+
 const addExpertSubmission = async (data) => {
   try {
     // Add a new document with a generated ID to the "experts" collection
@@ -54,4 +68,4 @@ const addExpertSubmission = async (data) => {
   }
 };
 
-export { addSubscription, addExpertSubmission };
+export { addSubscription, addSubscription2, addExpertSubmission };

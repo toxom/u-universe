@@ -5,15 +5,14 @@
     flex-direction: column; /* Stack .CTA divs vertically for smaller screens */
     justify-content: space-between; /* Add space between .CTA divs */
     align-items: center; /* Center the .CTA divs horizontally */
-
+  
   }
-
-
 
   .CTA {
     display: flex;
     align-items: center;
     flex-direction: column;
+    
   }
 
   /* Add a separate class for the illustration to control its styling */
@@ -38,6 +37,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    
   }
 
   /* Add a separate class for the illustration to control its styling */
@@ -50,6 +50,8 @@
 .CTA-container {
   /* Background color for the entire CTA container */
   display: flex;
+      flex-wrap: wrap;
+
   justify-content:center; /* Add space between .CTA divs */
   margin-left: 30%; /* Adjust left margin for smaller screens */
   margin-right: 30%; /* Adjust right margin for smaller screens */
@@ -58,33 +60,42 @@
 }
 
 .CTA {
-  /* Background color for the individual CTA components */
-  padding: 20px; /* Add padding to create space inside the component */
-  background-color: white;
-  border: 1px solid black; /* 1px solid black border */
-  border-radius: 4px;
+  /* Existing styles */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6); /* Adjusted the opacity on hover */
+  border: 1px solid; 
+  border-color: #E9E5DF;  border-radius: 4px;
   align-items: center;
-  margin-bottom: 20px; /* Add margin to separate the CTA components vertically */
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* Stack .CTA divs vertically for smaller screens */
-  transition: background-color 0.3s ease; /* Smooth transition effect */
+  flex-direction: column;
+  transition: background-color 0.3s ease;
 
-  
+  /* Glassmorphic style */
+  backdrop-filter: blur(10px); /* Add blur */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* outer shadow */
+              0 1px 3px rgba(0, 0, 0, 0.08), /* outer shadow */
+              inset 0 4px 6px rgba(255, 255, 255, 0.1), /* inner white shadow for shine */
+              inset 0 1px 1px rgba(255, 255, 255, 0.25); /* additional inner white shadow for more shine */
 }
 
 .CTA:hover {
-  background-color: rgb(241, 241, 241); /* Change the background color on hover */
-  transition: background-color 0.3s ease; /* Smooth transition effect */
-
+  background-color: rgba(241, 241, 241, 0.331); /* Adjusted the opacity */
+  transition: background-color 0.3s ease;
+  border: 1px solid; 
+  border-color: #E9E5DF;
 }
+
 
 /* Styling for paragraphs (p) */
 .CTA p {
   font-size: 16px; /* Adjust the font size as needed */
   margin-bottom: 10px; /* Adjust the margin as needed */
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center; /* Center the text within the paragraphs */
+  font-family: 'Comfortaa';  /* Add this line */
+
 }
 
 /* Styling for heading elements (h1, h2, h3) */
@@ -92,6 +103,8 @@
   font-size: 24px; /* Adjust the font size as needed */
   margin-bottom: 15px; /* Adjust the margin as needed */
   text-align: center; /* Center the text within the headings */
+  font-family: 'Comfortaa';  /* Add this line */
+
 }
 
 .CTA .Subscribe {
